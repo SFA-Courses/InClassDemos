@@ -1,5 +1,3 @@
-import javax.lang.model.util.ElementScanner14;
-
 public class Recursion {
     private static int[] intArray =  {23, 34, 45, 56, 67, 78};
     public static void main(String[] args) {
