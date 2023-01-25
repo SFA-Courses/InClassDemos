@@ -12,8 +12,7 @@ public class Recursion2 {
                 return middle;
             else if (sorted[middle] < key) {
                 left = middle + 1;
-            } else // sorted[middle] > key
-            {
+            } else { 
                 right = middle - 1;
             }
             return binarySearch(key, left, right);
