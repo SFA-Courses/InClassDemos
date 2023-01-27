@@ -3,7 +3,8 @@
 |:---------------|
 |-items : Objects[] |
 |-numItems : integer |
-|---------------|
+|---|
+|___|
 |+isEmpty() : boolean|
 |+getSize() : integer|
 |+add(index: integer, item: Object)|
