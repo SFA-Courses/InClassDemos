@@ -1,13 +1,5 @@
 # ADT List
-| ArrayBasedList |
-|:---------------|
-|-items : Objects[] |
-|-numItems : integer |
-|---|
-|___|
-|+isEmpty() : boolean|
-|+getSize() : integer|
-|+add(index: integer, item: Object)|
+
 
 +createList() - creates an empty list (constructor)
 
