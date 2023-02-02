@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-/*
+
 public class FavoritesGUI {
   public static void main(String[] args) throws ListException, MalformedURLException {
     JFrame frame = new JFrame("Text File to Button List");
@@ -43,4 +43,3 @@ public class FavoritesGUI {
     frame.setVisible(true);
   }
 }
-*/
