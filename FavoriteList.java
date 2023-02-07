@@ -24,8 +24,9 @@ public class FavoriteList extends ListADT<Favorite> {
             throw new ListException("Index " + index + " is invalid for a " +
                                       "list of size " + this.getSize());
 
-        for (int i = this.getSize(); i > index; i--)
+        for (int i = this.getSize(); i > index; i--) {
             this.favorites[i] = this.favorites[i-1];
+        }
 
         this.favorites[index] = item;
         this.numFavorites++;
