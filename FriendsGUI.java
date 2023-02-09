@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-/*
+
 public class FriendsGUI {
   
   public static void main(String[] args) throws ListException, MalformedURLException {
@@ -43,4 +43,4 @@ public class FriendsGUI {
     frame.setVisible(true);
   }
 }
-*/
+

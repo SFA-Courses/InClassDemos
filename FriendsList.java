@@ -91,4 +91,19 @@ public class FriendsList extends ListADT<Friend> {
         this.head = null;
     }
 
+    @Override
+    public String toString() {
+        String s = "[";
+        if (this.getSize() > 0) {
+            Node<Friend> current = this.head;
+            for (int i =0; i < this.getSize()-1; i++) {
+                s = s + current.getItem().toString() + ", ";
+                current = current.getNext();
+            }
+            s = s + current.getItem().toString();
+        }
+        
+        return s + "]";
+    }
+
 }
