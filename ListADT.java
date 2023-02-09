@@ -5,5 +5,5 @@ public abstract class ListADT<E> {
     public abstract void remove(int index);
     public abstract void removeAll();
     public abstract E get(int index);
-
+    //public abstract int getPosition(E listItem);
 }

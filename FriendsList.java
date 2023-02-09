@@ -106,4 +106,21 @@ public class FriendsList extends ListADT<Friend> {
         return s + "]";
     }
 
+    @Override
+    public int getPosition(Friend listItem) {
+        Node<Friend> current = this.head;
+        Friend currentFriend = current.getItem();
+        if (currentFriend.equals(listItem)) 
+            return 0;
+        
+        for (int i = 1; i < this.getSize(); i++) {
+            current = current.getNext();
+            currentFriend = current.getItem();
+            if (currentFriend.equals(listItem)) 
+                return i;
+        }
+        
+        return -1; 
+    }
+
 }
