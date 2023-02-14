@@ -106,7 +106,7 @@ public class FriendsList extends ListADT<Friend> {
         return s + "]";
     }
 
-    @Override
+    
     public int getPosition(Friend listItem) {
         Node<Friend> current = this.head;
         Friend currentFriend = current.getItem();
