@@ -12,7 +12,7 @@ public class UndoExample extends JFrame implements KeyListener {
     StackArrayBased<Character> stack;
 
     public UndoExample() {
-        stack = new StackArrayBased<Character>();
+      stack = new StackArrayBased<Character>();
         JPanel panel = new JPanel();
         JTextArea textBox = new JTextArea(6, 30);
         JScrollPane scrollPane = new JScrollPane(textBox);
@@ -22,9 +22,9 @@ public class UndoExample extends JFrame implements KeyListener {
         undoButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if (!stack.isEmpty())
-                        stack.pop();
-                    System.out.println(stack);
+                   if (!stack.isEmpty())
+                      stack.pop();
+                System.out.println(stack);
                     String s = textBox.getText();
                     textBox.setText(s.substring(0, s.length() - 1));
                 } catch (Exception ex) {
