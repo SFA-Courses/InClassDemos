@@ -58,8 +58,20 @@ public class ParaChecker extends JFrame implements KeyListener {
 
     }
 
-    private boolean paraMatch(String eq) {
-        // TODO: code ( ) matching
-        return true;
+    private boolean paraMatch(String exp) {
+        StackReferenceBased<Character> parStack = new StackReferenceBased<Character>();
+
+        for (int i = 0; i < exp.length(); i++) {
+            if (exp.charAt(i)== '(') 
+                parStack.push('(');
+            else if (exp.charAt(i) == ')') {
+                if (parStack.isEmpty())
+                    return false; 
+                else 
+                    parStack.pop();
+            }
+        }
+
+        return parStack.isEmpty();
     }
 }
