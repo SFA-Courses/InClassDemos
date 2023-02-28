@@ -7,7 +7,7 @@ public class QueueArrayBased<E> implements Queueable<E> {
     // create an empty queue
     public QueueArrayBased() {
         this.size = 0;
-        // this.queueArray = new Object[MAX_QUEUE];
+        this.queueArray = new Object[MAX_QUEUE];
     }
 
     @Override
