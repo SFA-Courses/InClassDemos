@@ -9,31 +9,52 @@ public class QueueFirstLast<E> implements Queueable<E> {
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return (this.first == null); // also could do this.last == null
     }
 
     @Override
     public void dequeueAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dequeueAll'");
+        this.first = null;
+        this.last = null;
     }
 
     @Override
     public E peek() throws QueueException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        if (this.isEmpty())
+            throw new QueueException("Queue is empty!");
+        else {
+            return this.first.getItem();
+        }
     }
 
     @Override
     public void enqueue(E newItem) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
+        Node<E> newNode = new Node<E>(newItem);
+        if (this.isEmpty()) {
+            this.first = newNode;            
+        } else {
+            this.last.setNext(newNode);            
+        }
+        this.last = newNode;
     }
 
     @Override
     public E dequeue() throws QueueException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+    }
+
+    @Override
+    public String toString() {
+        String s = "[";
+        Node<E> current = this.first;
+        while (current != null) {
+            s = s + current.getItem().toString();
+            if (current.getNext() != null)
+                s += ", ";
+
+            current = current.getNext();
+        }
+        return s + "]";
     }
 }

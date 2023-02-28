@@ -9,7 +9,7 @@ public class TestQueueFirstLast {
         System.out.println("After Enqueue: ");
         System.out.println(line);
         System.out.println();
-
+ 
         System.out.println("Test Dequeue: ");
         for (int i = 0; i < 3; i++)
             System.out.println(line.dequeue());            
@@ -24,6 +24,7 @@ public class TestQueueFirstLast {
         line.dequeueAll();
         System.out.println(line);
         System.out.println("Is Empty: " + line.isEmpty());
+
     }
     
 }
