@@ -40,8 +40,14 @@ public class QueueFirstLast<E> implements Queueable<E> {
 
     @Override
     public E dequeue() throws QueueException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+        if (this.isEmpty())
+            throw new QueueException("Queue is empty.");
+        else {
+            Node<E> next = this.first.getNext();
+            E front = this.first.getItem();
+            this.first = next;
+            return front;
+        }
     }
 
     @Override
