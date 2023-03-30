@@ -75,10 +75,35 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
+    public String inOrder() {
+        String s = "";
+        if (!this.isEmpty()) {
+            s += this.left.inOrder();
+            s += " " + this.root.toString() + " ";
+            s += this.right.inOrder();
+        }
+        return s;
+    }
 
+    public String preOrder() {
+        String s = "";
+        if (!this.isEmpty()) {
+            s += " " + this.root.toString() + " ";
+            s += this.left.preOrder();            
+            s += this.right.preOrder();
+        }
+        return s;
+    }
 
-
-
+    public String postOrder() {
+        String s = "";
+        if (!this.isEmpty()) {
+            s += this.left.postOrder();            
+            s += this.right.postOrder();
+            s += " " + this.root.toString() + " ";
+        }
+        return s;
+    }
 
 
 

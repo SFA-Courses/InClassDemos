@@ -15,9 +15,9 @@ public class TreeTest {
         System.out.println("Height: " + tree.height());
         System.out.println("Max: " + tree.max());
         System.out.println("Min: " + tree.min());
-        //System.out.println("In Order: " + tree.inOrder());
-        //System.out.println("Pre Order: " + tree.preOrder());
-        //System.out.println("Post Order: " + tree.postOrder());
+        System.out.println("In Order: " + tree.inOrder());
+        System.out.println("Pre Order: " + tree.preOrder());
+        System.out.println("Post Order: " + tree.postOrder());
 
         // System.out.println("Enter a number to remove: ");
         // Scanner console = new Scanner(System.in);
